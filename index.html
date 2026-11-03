@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0d">
+<title>Yasser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ampRoot" data-theme="black">
+  <div class="stage">
+    <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="grain"></div>
+
+    <div class="appWrap" id="ampWrap">
+    <div class="app">
+
+      <div class="top">
+        <div class="brand">Yasser</div>
+
+        <div class="clock">
+          <div class="ck"><b id="ampTime">--:--:--</b></div>
+          <div class="ck"><small id="ampDate">loading</small></div>
+        </div>
+
+        <button class="clrBtn" id="ampClr" title="Change page colors"><i></i> Colors</button>
+
+        <button class="clrBtn" id="ampDark" title="Night and day mode"><i></i> Dark</button>
+
+        <div class="me">
+          <span class="av"><img src="profile-about.jpg" alt="me"></span>
+          <div><div class="nm"><b>Yasser</b><small class="live" title="online"></small></div><span class="mail">yasser_khaled165@icloud.com</span></div>
+        </div>
+      </div>
+
+      <div class="shell">
+
+        <aside>
+          <div class="lab">Menu</div>
+          <nav class="nav">
+            <button data-v="about" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5"/></svg> About</button>
+            <button data-v="music"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 17V5l10-2v11"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="15.5" r="2.5"/></svg> Music</button>
+            <button data-v="gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="10" r="1.6"/><path d="M4 17l5-4 4 3 3-2 4 3"/></svg> Gallery</button>
+            <button data-v="friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3 19c.9-2.8 3.1-4.2 6-4.2s5.1 1.4 6 4.2"/><path d="M16 6.2a3 3 0 0 1 0 5.6M18.5 19c-.4-1.6-1.2-2.9-2.4-3.7"/></svg> Friends</button>
+          </nav>
+
+          <div class="lab">Social</div>
+          <div class="soc">
+            <a data-name="WhatsApp" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.5-4.5A8.4 8.4 0 1 1 20.5 11.6z"/><path d="M9.3 9.2c.4-.5 1.2-.4 1.5.1l.6 1.1c.2.5 0 .9-.3 1.2l-.4.4c.6 1 1.4 1.8 2.4 2.4l.4-.4c.3-.4.8-.5 1.2-.3l1.1.6c.6.3.6 1.1.1 1.5-1.2 1-3 .4-4.4-.9-1.3-1.3-2.4-3.3-2.2-4.7z"/></svg></a>
+            <a data-name="Facebook" href=""><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.6 20.9v-7.6h2.5l.4-2.9h-2.9V8.6c0-.8.2-1.4 1.4-1.4h1.6V4.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.2H7.7v2.9h2.5v7.6z"/></svg></a>
+            <a data-name="Instagram" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="4.6"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.2" cy="6.9" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            <a data-name="X / Twitter" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4.6l14 14.8M19 4.6L5 19.4"/></svg></a>
+            <a data-name="YouTube" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.4 9.3l4.6 2.7-4.6 2.7z" fill="currentColor"/></svg></a>
+            <a data-name="TikTok" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M14.2 4v9.4a3.3 3.3 0 1 1-2.9-3.3"/><path d="M14.2 4c.5 2.4 2.3 3.9 4.7 4.1"/></svg></a>
+            <a data-name="Telegram" href=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4.6L3.6 11.2l5.1 1.8 1.7 5.4 2.7-3.3 4.4 3.3z"/><path d="M8.7 13l9.6-6.6"/></svg></a>
+            <a data-name="Setting" href="https://xat.com/editme#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></a>
+          </div>
+
+          <div class="lab">Sound style</div>
+          <div class="gens" id="ampGens">
+            <button class="gen" data-gen="lofi" data-eq="66 58 44 34 26" data-speed="1.6s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Lo-Fi</span></button>
+            <button class="gen" data-gen="rock" data-eq="72 46 40 58 74" data-speed="0.55s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Rock</span></button>
+            <button class="gen" data-gen="jazz" data-eq="60 52 56 62 54" data-speed="0.9s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Jazz</span></button>
+            <button class="gen" data-gen="indie" data-eq="56 50 46 58 64" data-speed="0.8s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Indie</span></button>
+            <button class="gen" data-gen="electronic" data-eq="76 44 48 60 78" data-speed="0.4s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Electronic</span></button>
+            <button class="gen" data-gen="ambient" data-eq="58 50 54 44 38" data-speed="2.2s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Ambient</span></button>
+            <button class="gen" data-gen="soul" data-eq="64 52 50 46 56" data-speed="1.2s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Neo-Soul</span></button>
+            <button class="gen" data-gen="pop" data-eq="54 46 52 66 68" data-speed="0.65s"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="n">Pop</span></button>
+          </div>
+
+          <div class="np">
+            <div class="row">
+              <div class="disc" id="ampDisc"><img id="ampCover" alt=""></div>
+              <div><b id="ampTitle">Nothing playing</b><small id="ampArtist">Pick a track</small></div>
+            </div>
+            <div class="bar"><i id="ampBar"></i></div>
+          </div>
+        </aside>
+
+        <section class="disp">
+
+          <section class="view on" id="ampV-about">
+            <div class="vh"><div><h2>About</h2><p>Full profile</p></div><div class="ln"></div></div>
+
+            <div class="ab">
+
+              <div class="picwrap">
+                <img src="profile-about.jpg" alt="me">
+              </div>
+              <div class="abTxt">
+                <h3>Yasser</h3>
+                <div class="tag">iiYasseRii 367629158</div>
+                <p class="bio">Developer and UI/UX designer — I turn ideas into interfaces: writing code, shaping
+                layouts, and caring how every pixel feels. Building for the web since 2007, from Alexandria.</p>
+
+                <div class="facts">
+                  <div class="fc"><small>BORN</small><b>1/6/1994</b></div>
+                  <div class="fc"><small>LOCATION</small><b>Alexandria, Egypt</b></div>
+                  <div class="fc"><small>WORK</small><b>Developer / UI-UX</b></div>
+                  <div class="fc"><small>LANGUAGES</small><b>AR / EN</b></div>
+                  <div class="fc"><small>STACK</small><b>HTML / CSS / JS</b></div>
+                  <div class="fc"><small>SINCE</small><b>2007</b></div>
+                  <div class="fc"><small>MAIL</small><b>yasser_khaled165@icloud.com</b></div>
+                </div>
+              </div>
+              <div class="abMore">
+                <div class="chips">
+                  <span class="chip">Front-end</span><span class="chip">UI-UX Design</span><span class="chip">Clean Code</span>
+                  <span class="chip">Night drives</span><span class="chip">Coffee</span><span class="chip">Music</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="view" id="ampV-music">
+            <div class="plHead">
+              <div>
+                <div class="k">ACTIVE PLAYLIST</div>
+                <h1>Music</h1>
+                <div class="sub"><span id="ampCount">0</span> tracks &nbsp;|&nbsp; <span id="ampTotal">0h</span> &nbsp;|&nbsp; Yasser</div>
+                <div class="tags">
+                  <button class="pill" id="ampRand">&#10548; Shuffle</button>
+                  <button class="pill" id="ampStop">&#9632; Stop</button>
+                </div>
+              </div>
+
+              <img alt="">
+            </div>
+
+            <div class="vh">
+              <div class="ln"></div>
+              <button class="pill on" data-sort="custom">Custom</button>
+              <button class="pill" data-sort="title">Title &#8645;</button>
+              <button class="pill" data-sort="dur">Duration &#8645;</button>
+              <span class="pill" id="ampFilter" style="cursor:default">All</span>
+            </div>
+
+            <div class="lw">
+            <div id="ampList">
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>عيد ميلادك</b><small>الاخرس</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/up/upload/K2yQOB8iCg/akhras-Eid-Miladek-%D8%A7%D9%84%D8%A3%D8%AE%D8%B1%D8%B3-%D8%B9%D9%8A%D8%AF-%D9%85%D9%8A%D9%84%D8%A7%D8%AF%D9%83.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="lofi">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>لساتني جنبك</b><small>الاخرس</small></span>
+                <span class="tg">Lo-Fi</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_alakhrs_la_tsn_alsyf.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>لحالي</b><small>الاخرس</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_alakhrs_lhaly.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>استنى شوي</b><small>الاخرس</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_alakhrs_astni_shwy.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>بعد شو</b><small>الاخرس</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_alakhrs_bad_shw.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>لا تنسيني</b><small>سيلاوي</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/up/upload/iEPylN07CJ/Siilawy-%D9%84%D8%A7-%D8%AA%D9%86%D8%B3%D9%8A%D9%86%D9%8A.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>MVP</b><small>ابيوسف</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/2026/Albumaty.Com_abywsf_am_fy_by_-_mfb.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>خمسات</b><small>ابيوسف</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/2026/Albumaty.Com_abywsf_khmsat.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>إحساسي معاك</b><small>رامي صبرى</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/2026/Albumaty.Com_ramy_sbri_ehsasy_maak.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>ميدلي فلامنكو</b><small>رامي صبرى</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv2.albumaty.com/2025/Albumaty.Com_ramy_sbri_mydly_flamnkw.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>عليكي عيون</b><small>احمد سعد</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_ahmed_saad_aleky_3oun.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>اسجل روحي</b><small>محمد عبد الجبار</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/songs_2020/Albumaty.Com_mhmd_abd_algbar_asgl_rwhy.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>ياه</b><small>تامر عاشور</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/2024/Albumaty.Com_tamr_aashwr_yah.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+              <div class="tr" data-genre="pop">
+                <span class="num"></span>
+                <img class="art" alt="">
+                <span class="mt"><b>تشيل</b><small>الشامي</small></span>
+                <span class="tg">Pop</span>
+                <span class="du">--:--</span>
+                <a class="src" href="https://serv100.albumaty.com/song2022/Albumaty.Com_alshamy_tshyl.mp3"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></a>
+              </div>
+
+            </div>
+            <div class="ltrk" id="ampLTrack"><i></i></div>
+            </div>
+          </section>
+
+          <section class="view" id="ampV-gallery">
+            <div class="vh">
+              <div><h2>Gallery</h2><p>Photos and reels</p></div>
+              <div class="ln"></div>
+              <button class="pill on" data-f="all">All</button>
+              <button class="pill" data-f="photo">Photos</button>
+              <button class="pill" data-f="reel">Reels</button>
+            </div>
+            <div class="grid" id="ampGrid">
+
+              <div class="reels">
+                <div class="rl"><span class="cv"><video src="https://v1.pinimg.com/videos/iht/expMp4/c5/bf/1e/c5bf1e9fe11bb277e3a8f21683e7a8d5_720w.mp4" poster="https://i.pinimg.com/736x/62/18/ff/6218ffaf1bbccf5db9ea8b04853c8579.jpg" muted loop playsinline preload="metadata"></video></span><span class="bd"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg></span></div>
+                <div class="rl"><span class="cv"><video src="https://v1.pinimg.com/videos/mc/720p/9f/51/0e/9f510e6e406e8f570624d663c099c8b3.mp4" poster="https://i.pinimg.com/736x/5e/fb/30/5efb309a9eaa4496b92d28bb2e2e8628.jpg" muted loop playsinline preload="metadata"></video></span><span class="bd"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg></span></div>
+                <div class="rl"><span class="cv"><video src="https://v1.pinimg.com/videos/mc/720p/94/6d/e6/946de6696a6f6695c4d9ddb28844ebbb.mp4" poster="https://i.pinimg.com/736x/1b/40/2f/1b402f6b6a8643d8b303795b61e52465.jpg" muted loop playsinline preload="metadata"></video></span><span class="bd"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg></span></div>
+                <div class="rl"><span class="cv"><video src="https://v1.pinimg.com/videos/mc/720p/18/1c/6b/181c6bafddf87fdf20f947aab3224b28.mp4" poster="https://i.pinimg.com/736x/47/9d/49/479d49e4bdb419140a8e7aaf4db4deb8.jpg" muted loop playsinline preload="metadata"></video></span><span class="bd"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg></span></div>
+                <div class="rl"><span class="cv"><video src="https://v1.pinimg.com/videos/mc/720p/92/55/c8/9255c84b78bdffa627138246270c3e85.mp4" poster="https://i.pinimg.com/736x/0d/b4/34/0db4346b18c9cdbc4905a6b7b0c98022.jpg" muted loop playsinline preload="metadata"></video></span><span class="bd"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5l11 6.5-11 6.5z"/></svg></span></div>
+              </div>
+              <figure class="tile"><img src="gallery/p1.jpg" alt=""><figcaption>Café, Downtown</figcaption></figure>
+              <figure class="tile"><img src="gallery/p2.png" alt=""><figcaption>Street style</figcaption></figure>
+              <figure class="tile"><img src="gallery/p3.png" alt=""><figcaption>Black hoodie</figcaption></figure>
+              <figure class="tile"><img src="gallery/p4.jpg" alt=""><figcaption>Red jacket</figcaption></figure>
+              <figure class="tile"><img src="gallery/p5.png" alt=""><figcaption>Night out</figcaption></figure>
+              <figure class="tile"><img src="gallery/p6.jpg" alt=""><figcaption>Corniche</figcaption></figure>
+              <figure class="tile"><img src="gallery/p7.jpg" alt=""><figcaption>Corniche, B&amp;W</figcaption></figure>
+              <figure class="tile"><img src="gallery/p8.jpg" alt=""><figcaption>Beanie</figcaption></figure>
+              <figure class="tile"><img src="gallery/p9.jpg" alt=""><figcaption>In the car</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="view" id="ampV-friends">
+            <div class="vh"><div><h2>Friends</h2><p><span id="ampFr">0</span> people</p></div><div class="ln"></div></div>
+            <div class="fr">
+              <div class="fCard"><span class="dot on"></span><span class="add heart">♥</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Malk</b><small>maghoLa2016 1517534699</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Kemo</b><small>iKARiiM 1516635051</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Noga</b><small>iiinoga1iii 1504756318</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Soul</b><small>souLmateee 1553463653</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Fany</b><small>iiiFonyiii 1557834912</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Maher</b><small>iiiMaher 234823948</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Oussama</b><small>iiiOussama 344248367</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Dolly</b><small>DodoLove 1541187216</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Admin</b><small>Admiiniistrator 1539074384</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Mazagangy</b><small>lllLLLHeMalll 175996817</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Hagar</b><small>ixiaHagerixG 1561221665</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Semsem</b><small>xSMSMx 420204202</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Moka</b><small>iiqueenmokaii 1542411945</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Mzag</b><small>iMzag 183554071</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Mody</b><small>iMoODyx 59717043</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Sara</b><small>RanaRana2025 1548803421</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Apple</b><small>AappLe 45006611</small></div>
+              <div class="fCard"><span class="dot on"></span><span class="add">+</span><img src="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ccircle%20cx=%2750%27%20cy=%2736%27%20r=%2717%27%20fill=%27%238f98a3%27/%3E%3Cpath%20d=%27M15%2087c0-19%2016-30%2035-30s35%2011%2035%2030z%27%20fill=%27%238f98a3%27/%3E%3C/svg%3E" alt=""><b>Ahmed</b><small>iLord 125267706</small></div>
+            </div>
+          </section>
+
+          <div class="tl">
+            <div class="th"><span>AUDIO TIMELINE</span><b class="now" id="ampNow">0:00 / 0:00</b></div>
+            <div class="wave" id="ampWave"></div>
+            <div class="bt">
+              <button id="ampPrev" title="previous"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h2.5v14H7zM19 5l-8 7 8 7z"/></svg></button>
+              <button id="ampPlay" class="big" title="play / pause"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></button>
+              <button id="ampNext" title="next"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 5H17v14h-2.5zM5 5l8 7-8 7z"/></svg></button>
+              <button id="ampShuf" title="shuffle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h4l3 4M3 18h4l8-12h5"/><path d="M14 18h6M17 15l3 3-3 3M17 3l3 3-3 3"/></svg></button>
+              <button id="ampRep" title="repeat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 10V8a3 3 0 0 1 3-3h10l-2.5-2.5M20 14v2a3 3 0 0 1-3 3H7l2.5 2.5"/></svg></button>
+              <span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 9v6h3l4 3.5V5.5L7 9z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/></svg><input id="ampVol" type="range" min="0" max="1" step="0.01" value="0.8"></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    </div>
+
+    <p class="credit"><a href="https://xat.me/iiYasseRii" target="_blank" rel="noopener">Designed by <b>iiYasseRii</b> <span class="cid">367629158</span></a></p>
+
+    <div class="snow" id="ampSnow" data-count="42" data-speed="16"></div>
+  </div>
+
+  <div class="zoom" id="ampZoom"><button>&times;</button><img alt=""><video id="ampZoomV" controls playsinline preload="none"></video><iframe id="ampZoomY" title="YouTube reel" src="about:blank" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"></iframe></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
