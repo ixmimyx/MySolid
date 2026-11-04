@@ -399,6 +399,25 @@
     window.addEventListener("resize", size);
   })();
 
+  root.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  root.addEventListener("dragstart", function (e) { e.preventDefault(); });
+  $$("img, video").forEach(function (m) {
+    m.setAttribute("draggable", "false");
+    m.style.webkitUserDrag = "none";
+    m.style.webkitTouchCallout = "none";
+  });
+  document.addEventListener("keydown", function (e) {
+    var t = e.target, tag = t ? t.tagName : "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || (t && t.isContentEditable)) return;
+    var k = (e.key || "").toLowerCase();
+    if (k === " " || k === "spacebar") {
+      if (!$("#ampZoom").classList.contains("on")) { e.preventDefault(); $("#ampPlay").click(); }
+      return;
+    }
+    if (k === "f12" || ((e.ctrlKey || e.metaKey) && e.shiftKey && (k === "i" || k === "j" || k === "c")) ||
+        ((e.ctrlKey || e.metaKey) && (k === "u" || k === "s" || k === "p"))) e.preventDefault();
+  });
+
   show("about");
   fit();
 })();
