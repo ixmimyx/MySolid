@@ -122,68 +122,10 @@
   var list = $("#ampList");
   var rows = $$("#ampList .tr");
   var order = rows.slice();
-  var plain = new Audio();
-  var audio = plain;
-  var routed = null, eqCtx = null, eqBands = null, eqOut = null;
-
-  var eqMode = true, corsHosts = {};
+  var audio = new Audio();
   var idx = -1, shuffle = false, repeat = false, total = 0;
   var VOL = function () { var v = $("#ampVol"); return v ? Number(v.value) : .8; };
-  var HOST = function (u) { var a = document.createElement("a"); a.href = u; return a.hostname; };
-
-  function corsTest(url) {
-    var h = HOST(url);
-    if (!window.fetch || corsHosts[h] !== undefined) return;
-    corsHosts[h] = false;
-    var ctl = window.AbortController ? new AbortController() : null;
-    var stop = setTimeout(function () { if (ctl) ctl.abort(); }, 8000);
-    fetch(url, { mode: "cors", credentials: "omit", signal: ctl && ctl.signal,
-                 headers: { Range: "bytes=0-1023" } })
-      .then(function (res) { clearTimeout(stop); corsHosts[h] = !!res.ok; },
-            function () { clearTimeout(stop); corsHosts[h] = false; });
-  }
-
-  var EQF = [[90, "lowshelf"], [300, "peaking"], [900, "peaking"], [2600, "peaking"], [8000, "highshelf"]];
-  function buildGraph() {
-    if (routed) return true;
-    if (!eqMode) return false;
-    var AC = window.AudioContext || window.webkitAudioContext;
-    if (!AC) { eqMode = false; return false; }
-    try {
-      eqCtx = new AC();
-      routed = new Audio();
-      routed.crossOrigin = "anonymous";
-      routed.volume = VOL();
-      var node = eqCtx.createMediaElementSource(routed);
-      eqBands = EQF.map(function (f) {
-        var b = eqCtx.createBiquadFilter();
-        b.type = f[1]; b.frequency.value = f[0]; b.Q.value = .9;
-        return b;
-      });
-      eqOut = eqCtx.createGain();
-      var prev = node;
-      eqBands.forEach(function (b) { prev.connect(b); prev = b; });
-      prev.connect(eqOut); eqOut.connect(eqCtx.destination);
-      wireAudio(routed, true);
-      return true;
-    } catch (e) {
-      routed = null; eqMode = false;
-      return false;
-    }
-  }
-  function applyEQ() {
-    var b = $$(".gen").filter(function (x) { return x.classList.contains("on"); })[0];
-    if (!eqBands) return;
-    var hs = ((b && b.getAttribute("data-eq")) || "50 50 50 50 50").split(/\s+/);
-    var peak = 0;
-    eqBands.forEach(function (f, n) {
-      var g = Math.max(-11, Math.min(11, ((Number(hs[n]) || 50) - 50) * .24));
-      f.gain.setTargetAtTime(g, eqCtx.currentTime, .04);
-      peak = Math.max(peak, Math.abs(g));
-    });
-    eqOut.gain.setTargetAtTime(Math.pow(10, -peak * .45 / 20), eqCtx.currentTime, .08);
-  }
-  function wireAudio(el, isRouted) {
+  function wireAudio(el) {
     el.addEventListener("timeupdate", function () {
       if (el !== audio || scrubbing) return;
       var t = el.duration || 0, f = t ? el.currentTime / t : 0;
@@ -192,18 +134,10 @@
       bars.forEach(function (b, n) { b.classList.toggle("past", (n / bars.length) < f); });
     });
     el.addEventListener("ended", function () { if (el === audio) { repeat ? play(rows[idx]) : step(1); } });
-    el.addEventListener("play", function () { if (el === audio) { $("#ampWave").classList.add("live"); $("#ampDisc").classList.add("live"); icon(); } });
-    el.addEventListener("pause", function () { if (el === audio) { $("#ampWave").classList.remove("live"); $("#ampDisc").classList.remove("live"); icon(); } });
-    el.addEventListener("error", function () {
-      if (el !== audio) return;
-      if (!isRouted) return;
-      corsHosts[HOST(el.src)] = false;
-      audio = plain; plain.volume = VOL(); plain.src = el.src;
-      plain.play().catch(function () {});
-      applyEQ();
-    });
+    el.addEventListener("play", function () { if (el === audio) { $("#ampWave").classList.add("live"); $("#ampDisc").classList.add("live"); $("#ampEqv").classList.add("live"); icon(); } });
+    el.addEventListener("pause", function () { if (el === audio) { $("#ampWave").classList.remove("live"); $("#ampDisc").classList.remove("live"); $("#ampEqv").classList.remove("live"); icon(); } });
   }
-  wireAudio(plain, false);
+  wireAudio(audio);
 
   rows.forEach(function (r, i) {
     r.style.setProperty("--i", i);
@@ -211,7 +145,6 @@
     r.addEventListener("click", function (e) { if (!e.target.closest(".src")) play(r); });
     r.querySelector(".src").addEventListener("click", function (e) { e.preventDefault(); play(r); });
     var probe = new Audio(); probe.preload = "metadata";
-    corsTest(r.querySelector(".src").href);
     probe.addEventListener("loadedmetadata", function () {
       r.querySelector(".du").textContent = mmss(probe.duration);
       r.setAttribute("data-sec", Math.round(probe.duration));
@@ -227,12 +160,9 @@
     if (!r) return;
     idx = rows.indexOf(r);
     var url = r.querySelector(".src").href;
-    audio = (eqMode && corsHosts[HOST(url)] === true && buildGraph()) ? routed : plain;
-    if (audio === routed && eqCtx.state === "suspended") eqCtx.resume();
     audio.volume = VOL();
     audio.src = url;
     audio.play().catch(function () {});
-    applyEQ();
     var art = r.querySelector(".art").getAttribute("src");
     if (art) { $("#ampCover").setAttribute("src", art); } else { $("#ampCover").removeAttribute("src"); }
     $("#ampTitle").textContent = r.querySelector(".mt b").textContent;
@@ -263,11 +193,11 @@
   $("#ampRep").addEventListener("click", function () { repeat = !repeat; this.classList.toggle("on", repeat); });
   $("#ampRand").addEventListener("click", function () { var v = current(); play(v[Math.floor(Math.random() * v.length)]); });
   $("#ampStop").addEventListener("click", function () {
-    [plain, routed].forEach(function (a) { if (a && !a.paused) { a.pause(); a.currentTime = 0; } });
+    if (!audio.paused) { audio.pause(); audio.currentTime = 0; }
     icon();
   });
   $("#ampVol").addEventListener("input", function () {
-    var v = Number(this.value); plain.volume = v; if (routed) routed.volume = v;
+    audio.volume = Number(this.value);
   });
 
   var bars = [];
@@ -318,22 +248,6 @@
   }
   bindSeek($(".np .bar"));
   bindSeek($("#ampWave"));
-
-  $$(".gen").forEach(function (b) {
-    var hs = (b.getAttribute("data-eq") || "50 50 50 50 50").split(/\s+/);
-    b.style.setProperty("--sp", b.getAttribute("data-speed") || "1s");
-    Array.prototype.forEach.call(b.querySelectorAll(".eq i"), function (bar, n) {
-      bar.style.setProperty("--h", (Number(hs[n]) || 50) + "%");
-      bar.style.animationDelay = (n * 0.07) + "s";
-    });
-    b.addEventListener("click", function () {
-      $$(".gen").forEach(function (x) { x.classList.remove("on"); });
-      b.classList.add("on");
-
-      $$("#ampList .tg").forEach(function (t) { t.textContent = b.querySelector(".n").textContent; });
-      applyEQ();
-    });
-  });
 
   var asc = {};
   $$("[data-sort]").forEach(function (b) {
