@@ -168,7 +168,7 @@
 #ampRoot .me{display:flex;align-items:center;gap:11px;background:var(--card);border-radius:14px;padding:7px 13px;box-shadow:var(--raiseSm);transition:background .5s,box-shadow .5s}
 #ampRoot .me .av{width:58px;height:58px;border-radius:50%;overflow:hidden;flex:0 0 auto;cursor:pointer;border:3px solid var(--card);box-shadow:var(--raiseSm),0 0 0 2px var(--accent),0 0 20px var(--glow2);transition:border-color .5s,box-shadow .5s,transform .3s cubic-bezier(.22,.9,.3,1)}
 
-#ampRoot .me .av>img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 0;transform:scale(1.61);transform-origin:42% 3.5%}
+#ampRoot .me .av>img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 0;transform:scale(3);transform-origin:41.7% 3.33%}
 #ampRoot .me .av:hover{transform:translateY(-4px)}
 
 #ampRoot .me .nm{display:flex;align-items:center;gap:7px}
@@ -364,7 +364,7 @@
 #ampRoot .picwrap{position:relative;width:100%;align-self:stretch;grid-row:1;
   border-radius:var(--r2);overflow:hidden;background:var(--card);box-shadow:var(--raiseSm);
   cursor:pointer;transition:box-shadow .3s,transform .3s cubic-bezier(.22,.9,.3,1)}
-#ampRoot .picwrap>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+#ampRoot .picwrap>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:10% 50%}
 
 #ampRoot .picwrap::after{content:"";position:absolute;inset:0;border-radius:var(--r2);pointer-events:none;
   background:var(--sh);background-size:300% 100%;background-repeat:no-repeat;background-position:88% 0;
